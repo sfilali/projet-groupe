@@ -4,8 +4,8 @@
     
     <div class="container">
         <h1 class="text-center">Tâches</h1>
-        <div class="row m-0 border-bottom text-center">
-            <div class="col-4">Nom</div>
+        <div class="row m-0 border-bottom ">
+            <div class="col-4">Nom de la tâche</div>
             <div class="col-6">Description</div>
             <div class="col-2">Projets ID</div>
         </div>

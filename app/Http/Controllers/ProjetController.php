@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Projet;
+use App\User;
 use Illuminate\Http\Request;
 
 class ProjetController extends Controller
@@ -17,15 +18,21 @@ class ProjetController extends Controller
 
     public function create()
     {
-        $projets = Projet::all();
-        return view('projets.create', compact('projets'));
-
+        $users = User::all();
+        return view('projets.create', compact('users'));
     }
 
 
     public function store(Request $request)
     {
-        //
+        $projet = new projet();
+
+        $projet-> name = $request-> projet_name;
+        $projet-> description = $request-> description;
+        $projet-> users_id = $request-> users_id;
+
+        $projet->save();
+        return redirect()->route('projets.index');
     }
 
 
