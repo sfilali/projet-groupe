@@ -8,10 +8,10 @@
     <link rel="stylesheet" href="/css/app.css">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="mx-auto navbar navbar-expand-lg navbar-light bg-light m-3">
       
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav mr-auto">
+        <div class=" collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mx-auto">
             <li class="nav-item">
               <a class="nav-link" href="/users">User</a>
             </li>

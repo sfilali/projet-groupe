@@ -3,7 +3,7 @@
 @section('content')
     <div class="container">
         <h1 class="text-center">User</h1>
-        <div class="row m-0 border-bottom text-center">
+        <div class="row m-0 border-bottom">
             <div class="col-2">ID</div>
             <div class="col-4">Nom</div>
             <div class="col-6">e-mail</div>

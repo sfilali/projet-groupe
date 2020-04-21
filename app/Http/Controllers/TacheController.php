@@ -17,7 +17,8 @@ class TacheController extends Controller
 
     public function create()
     {
-        //
+        $taches = Tache::all();
+        return view('taches.create', compact('taches'));
     }
 
 

@@ -1,7 +1,7 @@
 @extends('layouts.index')
 
 @section('content')
-    <h1>taches</h1>
+    
     <div class="container">
         <h1 class="text-center">Tâches</h1>
         <div class="row m-0 border-bottom text-center">
