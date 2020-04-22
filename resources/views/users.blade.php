@@ -22,12 +22,13 @@
                 </div>
                 
                 <div class="col-2">
-                    <form action="users/{{id}}/edit">
+                    <form action="users/{{$user->id}}/edit ">
                         @csrf
                         <button type="submit" class="btn btn-info">Edit</button>
                     </form>
-                    <form action="users/{{id}}">
+                    <form action="users/{{$user->id}}" method="post">
                         @csrf
+                        @method('DELETE')
                         <button type="submit" class="btn btn-danger">Delete</button>
                     </form>
                 </div>

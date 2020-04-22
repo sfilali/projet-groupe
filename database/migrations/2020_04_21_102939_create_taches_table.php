@@ -1,4 +1,4 @@
-gi<?php
+<?php
 
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
@@ -18,7 +18,8 @@ class CreateTachesTable extends Migration
             $table->string('name');
             $table->text('description');
             $table->unsignedBigInteger('projets_id');
-            $table->foreign('projets_id')->references('id')->on('projets')->ondelete('cascade');
+            
+            $table->foreign('projets_id')->references('id')->on('projets')->onDelete('cascade');
             $table->timestamps();
         });
     }

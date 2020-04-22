@@ -54,9 +54,9 @@ class TacheController extends Controller
     }
 
 
-    public function destroy(Tache $tache)
+    public function destroy(Tache $tach)
     {
-        $tache->delete();
+        $tach->delete();     
         return redirect()->back();
     }
 }
