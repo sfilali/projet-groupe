@@ -52,7 +52,11 @@ class ProjetController extends Controller
 
     public function update(Request $request, Projet $projet)
     {
-        //
+        $projet-> name = $request-> projet_name;
+        $projet-> description = $request-> description;
+        $projet-> users_id = $request-> users_id;
+        $projet->save();
+        return redirect()->route('projets.index');
     }
 
  

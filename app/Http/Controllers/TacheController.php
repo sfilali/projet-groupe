@@ -27,7 +27,7 @@ class TacheController extends Controller
     {
         $tache = new tache();
 
-        $tache-> name = $request-> taches_name;
+        $tache-> name = $request-> tache_name;
         $tache-> description = $request-> description;
         $tache-> projets_id = $request-> projets_id;
 
@@ -42,15 +42,20 @@ class TacheController extends Controller
     }
 
 
-    public function edit(Tache $tache)
+    public function edit(Tache $tach)
     {
-        return view("taches.edit", compact('tache'));
+        $projets = Projet::all();
+        return view("taches.edit", compact('tach', 'projets'));
     }
 
  
-    public function update(Request $request, Tache $tache)
+    public function update(Request $request, Tache $tach)
     {
-
+        $tach-> name = $request-> tache_name;
+        $tach-> description = $request-> description;
+        $tach-> projets_id = $request-> projets_id;
+        $tach->save();
+        return redirect()->route('taches.index');
     }
 
 

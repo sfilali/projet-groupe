@@ -6,19 +6,19 @@
 <div  class="d-flex justify-content-center m-5">
 
 	<div  class="w-100 border bg-light p-5">
-        <form  action="/taches/{{$tache->id}}"  method="POST" >
+        <form  action="/taches/{{$tach->id}}"  method="POST" >
             @csrf
             @method('put')
 
                 <div  class="form-group">
                     <label  for="">Projet Name</label>
-                    <input  type="text" value={{$tache->name}} class="form-control"  name="tache_name"  id=""    placeholder="Name">
+                    <input  type="text" value={{$tach->name}} class="form-control"  name="tache_name"  id=""    placeholder="Name">
                 </div>
             
             
                 <div  class="form-group mb-4">
                     <label  for="">Description</label>
-                    <input  type="text" class="form-control" value={{$tache->description}} name="description"  id=""  placeholder="Description">
+                    <input  type="text" class="form-control" value={{$tach->description}} name="description"  id=""  placeholder="Description">
                 </div>
             
                 <div class="form-group">

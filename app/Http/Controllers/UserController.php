@@ -41,15 +41,19 @@ class UserController extends Controller
     }
 
 
-    public function edit($id)
+    public function edit(User $user)
     {
-        return view("users.edit", compact('id'));
+        return view("users.edit", compact('user'));
     }
 
 
-    public function update(Request $request, $id)
+    public function update(Request $request, User $user)
     {
-        //
+        $user-> name = $request-> name;
+        $user-> email = $request-> email;
+        $user-> password = $request-> password;
+        $user->save();
+        return redirect()->route('users.index');
     }
 
 

@@ -6,7 +6,7 @@
 <div  class="d-flex justify-content-center m-5">
 
 	<div  class="w-100 border bg-light p-5">
-        <form  action="/projets{{$projet->id}}"  method="POST" >
+        <form  action="/projets/{{$projet->id}}"  method="POST" >
             @csrf
             @method('put')
 
@@ -25,7 +25,7 @@
                     <label for="">Users</label>
                     <select name="users_id" id="users_id">
                         @foreach ($users as $user)
-                            <option value="{{$user->id}}">{{$user->name}}</option>
+                            <option  value="{{$user->id}}">{{$user->name}}</option>
                         @endforeach
                     </select>
                 </div>

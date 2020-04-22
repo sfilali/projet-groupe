@@ -10,7 +10,7 @@
             @csrf
                 <div  class="form-group">
                     <label  for="">Tache Name</label>
-                    <input  type="text" class="form-control"  name="taches_name" placeholder="Name">
+                    <input  type="text" class="form-control"  name="tache_name" placeholder="Name">
                 </div>
             
             
