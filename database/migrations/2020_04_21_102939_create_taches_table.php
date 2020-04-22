@@ -18,7 +18,7 @@ class CreateTachesTable extends Migration
             $table->string('name');
             $table->text('description');
             $table->unsignedBigInteger('projets_id');
-            $table->foreign('projets_id')->references('id')->on('users')->ondelete('cascade');
+            $table->foreign('projets_id')->references('id')->on('projets')->ondelete('cascade');
             $table->timestamps();
         });
     }

@@ -44,7 +44,8 @@ class ProjetController extends Controller
  
     public function edit(Projet $projet)
     {
-        //
+        return view("projets.edit", compact('projet'));
+
     }
 
 
@@ -56,6 +57,7 @@ class ProjetController extends Controller
  
     public function destroy(Projet $projet)
     {
-        //
+        $projet->delete();
+        return redirect()->back();
     }
 }

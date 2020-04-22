@@ -23,5 +23,6 @@
             </div>
         @endforeach
         <a href="/taches/create" class="btn btn-success">Créer une Tâche</a>
+
     </div>
 @endsection

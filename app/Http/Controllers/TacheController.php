@@ -44,18 +44,19 @@ class TacheController extends Controller
 
     public function edit(Tache $tache)
     {
-        //
+        return view("taches.edit", compact('tache'));
     }
 
  
     public function update(Request $request, Tache $tache)
     {
-        //
+
     }
 
 
     public function destroy(Tache $tache)
     {
-        //
+        $tache->delete();
+        return redirect()->back();
     }
 }
