@@ -24,7 +24,7 @@
                     <div class="p-2">
                         <form action="projets/{{id}}/edit">
                             @csrf
-                            <button type="submit" class="btn btn-info"></button>
+                            <button type="submit" class="btn btn-info">Edit</button>
                         </form>
                         <form action="projets/{{id}}">
                             @csrf

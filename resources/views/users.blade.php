@@ -24,7 +24,7 @@
                 <div class="col-2">
                     <form action="users/{{id}}/edit">
                         @csrf
-                        <button type="submit" class="btn btn-info"></button>
+                        <button type="submit" class="btn btn-info">Edit</button>
                     </form>
                     <form action="users/{{id}}">
                         @csrf
