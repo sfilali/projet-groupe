@@ -30,7 +30,6 @@ class UserController extends Controller
         $user->password=request('password');
 
         $user->save();
-
         return redirect()->route('users.index');
     }
 

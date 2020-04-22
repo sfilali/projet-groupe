@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use App\Tache;
 use Illuminate\Http\Request;
+use App\Tache;
 use App\Projet;
 
 class TacheController extends Controller

@@ -3,14 +3,17 @@
 @section('content')
     <div class="container">
         <h1 class="text-center">Projets</h1>
+        <div class="d-flex justify-content-center m-3">
+            <a href="/projets/create" class="btn btn-success">Créer un Projet</a>
+        </div>
         <div class="row m-0 border-bottom ">
             <div class="col-3">Nom du projet</div>
             <div class="col-5">Description</div>
             <div class="col-2">Users ID</div>
-            <div class="col-2">Actions</div>
+            <div class="col-2 text-center">Actions</div>
         </div>
         @foreach ($projets as $projet)
-            <div class="row m-0">
+            <div class="row mt-0">
                 <div class="col-3">
                     <div class="p-2">{{$projet->name}}</div>
                 </div>
@@ -21,7 +24,7 @@
                     <div class="p-2">{{$projet->users_id}}</div>
                 </div>
                 <div class="col-2">
-                    <div class="p-2">
+                    <div class="p-2 d-flex justify-content-around">
                         <form action="projets/{{$projet->id}}/edit">
                             @csrf
                             <button type="submit" class="btn btn-info">Edit</button>
@@ -35,6 +38,5 @@
                 </div>
             </div>
         @endforeach
-        <a href="/projets/create" class="btn btn-success">Créer un Projet</a>
     </div>
 @endsection

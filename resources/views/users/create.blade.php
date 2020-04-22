@@ -1,7 +1,9 @@
 @extends('layouts.index')
+
 @section('content')
+
     <div class="container">
-        <h1 class="text-center">Créer un Utilistaeur</h1>
+        <h2 class="text-center">Créer un Utilistaeur</h2>
         <form action="/users" method="post">
             @csrf
             <div class="form-group">
