@@ -44,7 +44,8 @@ class ProjetController extends Controller
  
     public function edit(Projet $projet)
     {
-        return view("projets.edit", compact('projet'));
+        $users = User::all();
+        return view("projets.edit", compact('projet', 'users'));
 
     }
 
